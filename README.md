@@ -11,24 +11,17 @@ int main()
     RandomNumber = rand() % 20;
     cout << "Введіть число від 0 до 19: ";
 
-    int UserNumber;
-     do
-    {
-      cin >> UserNumber;
-
-      if (UserNumber < RandomNumber)
-    {
-      cout << "Загадане число більше!" << endl;
-    }
-      else if (UserNumber > RandomNumber)
-    {
-      cout << "Загадане число менше!" << endl;
-    }
-      else
-    {
-      cout << "Ви вгадали число! Це було число " << RandomNumber << endl;
-    }
-
-    } while (UserNumber != RandomNumber);
+int UserNumber;
+do
+{
+    cin >> UserNumber;
+if (UserNumber < RandomNumber)
+    cout << "Загадане число більше!" << endl;
+else if (UserNumber > RandomNumber)
+    cout << "Загадане число менше!" << endl;
+else
+    cout << "Ви вгадали число! Це було число " << RandomNumber << endl;     
+} 
+while (UserNumber != RandomNumber);
 return 0;
 }
