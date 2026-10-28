@@ -3,25 +3,29 @@
 #include <random>
 using namespace std;
 int main()
-{   SetConsoleCP(1251);
+{   
+    SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     srand(time(NULL));
     int RandomNumber;
     cout << "гра вгадай число" << endl;
     RandomNumber = rand() % 20;
     cout << "Введіть число від 0 до 19: ";
-
-int UserNumber;
+    int UserNumber;
+    int usertry = 0;
 do
 {
+    usertry ++;
     cin >> UserNumber;
-if (UserNumber < RandomNumber)
-    cout << "Загадане число більше!" << endl;
-else if (UserNumber > RandomNumber)
-    cout << "Загадане число менше!" << endl;
-else
-    cout << "Ви вгадали число! Це було число " << RandomNumber << endl;     
+    if (UserNumber < RandomNumber)
+        cout << "Загадане число більше!" << endl;
+    else if (UserNumber > RandomNumber)
+        cout << "Загадане число менше!" << endl;
+    else
+        cout << "Ви вгадали число! Це було число " << RandomNumber << endl; 
+        
 } 
 while (UserNumber != RandomNumber);
+cout << endl << "Кількість спроб: " << usertry;
 return 0;
 }
